@@ -4,7 +4,7 @@ function Movies({ movies }) {
   return (
     <div className='cards-list'>
       {movies &&
-        movies.map((movie) => <Movie key={movie.imdbID} movie={movie} />)}
+        movies.map((movie) => <Movie key={movie.imdbID} {...movie} />)}
     </div>
   );
 }
