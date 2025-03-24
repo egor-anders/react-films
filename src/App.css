@@ -23,8 +23,16 @@ nav {
 }
 
 .search.input-field.inline {
-  display: grid;
-  grid-template-columns: 1fr max-content;
-  gap: 20px;
-  align-items: center;
+ position: relative;
+ width: 100%;
+}
+
+.search button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+label:not(:last-child) {
+  margin-right: 1rem;
 }

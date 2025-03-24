@@ -1,11 +1,18 @@
 import Movie from './Movie';
 
-function Movies({ movies }) {
+function Movies({ movies = [] }) {
   return (
-    <div className='cards-list'>
-      {movies &&
-        movies.map((movie) => <Movie key={movie.imdbID} {...movie} />)}
-    </div>
+    <>
+      {movies.length ? (
+        <div className="cards-list">
+          {movies.map((movie) => (
+            <Movie key={movie.imdbID} {...movie} />
+          ))}
+        </div>
+      ) : (
+        <h2>Nothing found</h2>
+      )}
+    </>
   );
 }
 
